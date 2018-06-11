@@ -31,11 +31,19 @@ LIST=(
   os-js/osjs-xterm-application
 )
 
+# We also need the base repository
 git clone -b v3 --single-branch git@github.com:os-js/OS.js.git
 
 pushd packages/
   for d in ${LIST[*]}; do
     echo -e "\e[1mCloning '$d'\e[0m"
-    git clone git@github.com:os-js/$d.git
+    git clone --recursive git@github.com:os-js/$d.git
+
+    # Installs dependencies in applications and themes
+    # As this is not covered by lerna
+    if [[ $d = *"application"* ]] || [[ $d = "*theme"* ]]; then
+      dd=${d/*\//}
+      (cd $dd && npm install)
+    fi
   done
 popd
