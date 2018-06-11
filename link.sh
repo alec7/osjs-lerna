@@ -42,8 +42,8 @@ pushd OS.js/
 
   echo -e "\e[1mSymlinking default OS.js packages\e[0m"
   pushd src/packages/
-    ln -sf ../../node_modules/\@osjs/standard-theme StandardTheme
-    ln -sf ../../node_modules/\@osjs/example-application ExampleApplication
+    ln -sf ../../../packages/osjs-standard-theme StandardTheme
+    ln -sf ../../../packages/osjs-example-application ExampleApplication
   popd
 
   echo -e "\e[1mBuilding OS.js manifest\e[0m"
