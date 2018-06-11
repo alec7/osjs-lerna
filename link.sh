@@ -44,6 +44,16 @@ pushd OS.js/
   pushd src/packages/
     ln -sf ../../../packages/osjs-standard-theme StandardTheme
     ln -sf ../../../packages/osjs-example-application ExampleApplication
+    ln -sf ../../../packages/osjs-calculator-application Calculator
+    ln -sf ../../../packages/osjs-example-iframe-application ExampleIframe
+    ln -sf ../../../packages/osjs-filemanager-application FileManager
+    ln -sf ../../../packages/osjs-htmlviewer-application HTMLViewer
+    ln -sf ../../../packages/osjs-musicplayer-application MusicPlayer
+    ln -sf ../../../packages/osjs-pdfreader-application PDFReader
+    ln -sf ../../../packages/osjs-preview-application Preview
+    ln -sf ../../../packages/osjs-textpad-application Textpad
+    ln -sf ../../../packages/osjs-xpra-application Xpra
+    ln -sf ../../../packages/osjs-xterm-application Xterm
   popd
 
   echo -e "\e[1mBuilding OS.js manifest\e[0m"
